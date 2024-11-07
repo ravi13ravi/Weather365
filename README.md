@@ -1,6 +1,6 @@
 # Weather Dashborad Application
 
- Weather365
+- Weather365
 
 ## Table of Contents
 
