@@ -1,0 +1,62 @@
+.main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 26% 70%;
+  gap: 35px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f5f8fa; /* Soft background for separation */
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Hover effect */
+}
+
+@media (max-width: 992px) {
+  .main {
+    grid-template-columns: 100%;
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+/* Column Content Styling */
+.main > div {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Light shadow for separation */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main > div:hover {
+  background-color: #f0f4f8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Styling */
+.main > div h2 {
+  font-size: 1.4rem;
+  color: #333; /* Darker for readability */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.main > div p {
+  color: #555; /* Dark gray for general text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Subtle Dividers for Sections */
+.main > div:not(:last-child) {
+  border-bottom: 1px solid #e6e9ed;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}

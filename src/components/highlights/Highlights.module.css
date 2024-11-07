@@ -1,0 +1,88 @@
+/* Highlights Section */
+.highlights {
+  background-color: #f9fafb; /* Light background for clarity */
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.tH {
+  font-size: 1.4rem;
+  color: #333; /* Darker color for visibility */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Row and Box Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Even spacing between boxes */
+}
+
+.box {
+  background: linear-gradient(145deg, #ffffff, #e6e9ef); /* Subtle gradient for depth */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  width: calc(33% - 20px); /* Responsive card width */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 1px 4px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Box Header */
+.box h3 {
+  font-size: 1.1rem;
+  color: #555; /* Slightly darker for readability */
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Bottom Section in Box */
+.box .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box .bottom svg {
+  width: 24px;
+  height: 24px;
+  color: #4c6ef5; /* Blue icon color */
+}
+
+.box .bottom p {
+  font-size: 1.2rem;
+  color: #333; /* Darker text color for visibility */
+  font-weight: bold;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+  .box {
+      width: calc(50% - 20px); /* Adjusted width for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .box {
+      width: 100%; /* Full-width for smaller screens */
+      padding: 15px;
+  }
+}

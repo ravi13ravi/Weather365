@@ -1,0 +1,97 @@
+.hourlyForecast h2 {
+  color: var(--main-text-color);
+  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hourlyForecast .sliderContainer {
+  overflow-x: auto;
+  padding: 20px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+}
+
+.hourlyForecast .sliderContainer::-webkit-scrollbar {
+  height: 8px; /* Height of scrollbar */
+}
+
+.hourlyForecast .sliderContainer::-webkit-scrollbar-thumb {
+  background: #b3b3b3; /* Color of scrollbar thumb */
+  border-radius: 10px;
+}
+
+.sliderContainer .sliderList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.sliderContainer .sliderList:first-child {
+  margin-bottom: 20px;
+}
+
+.sliderContainer .sliderList .sliderItem {
+  background-color: var(--boxes-colors);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  list-style: none;
+  min-width: 110px;
+  flex: 1 1 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sliderContainer .sliderList .sliderItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Hover shadow for lift effect */
+}
+
+.sliderContainer .sliderList .sliderItem p {
+  font-size: 0.9rem;
+  color: var(--main-text-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+.sliderContainer .sliderList .sliderItem img {
+  width: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.sliderContainer .sliderList .sliderItem img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sliderContainer .sliderList {
+      gap: 10px;
+  }
+
+  .sliderContainer .sliderList .sliderItem {
+      padding: 10px;
+      min-width: 80px;
+  }
+
+  .sliderContainer .sliderList .sliderItem p {
+      font-size: 0.85rem;
+  }
+
+  .sliderContainer .sliderList .sliderItem img {
+      width: 40px;
+      height: 40px;
+  }
+}

@@ -1,0 +1,117 @@
+/* Footer Container */
+footer {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 30px 50px;
+  background: linear-gradient(
+    135deg,
+    #f9f9f9,
+    #e0e7ff
+  ); /* Light background gradient */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333; /* Dark text color */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Gradient Border */
+footer:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #4c6ef5, #ff6b6b, #ffa94d);
+  z-index: -1;
+  border-radius: 20px;
+  padding: 5px;
+  background-size: 300%;
+  animation: gradient-border 8s infinite;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* OpenWeather Logo Section */
+footer .openWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+footer .openWeather a img {
+  width: 100px;
+  padding-left: 8px;
+  transition:
+    transform 0.4s ease,
+    filter 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(76, 110, 245, 0.5));
+}
+
+footer .openWeather a img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(76, 110, 245, 0.7));
+}
+
+/* Footer Text Styling */
+footer p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333; /* Darker grey for readability */
+}
+
+.info {
+  font-weight: 700;
+  font-size: 18px;
+  color: #4c6ef5; /* Dark blue for contrast */
+}
+
+/* Animated Name Styling */
+.myName {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b6b; /* Coral color for accent */
+  text-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    text-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+  }
+  to {
+    text-shadow: 0 2px 12px rgba(255, 107, 107, 0.5);
+  }
+}
+
+/* Social Links Styling */
+.links a {
+  color: #808080; /* grey color */
+  padding: 5px;
+  font-size: 24px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.links a:hover {
+  color: #4c6ef5; /* Deep blue color on hover*/
+  transform: translateY(-3px) scale(1.1);
+}

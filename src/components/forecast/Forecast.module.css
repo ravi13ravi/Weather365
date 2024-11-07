@@ -1,0 +1,83 @@
+.forecast h2 {
+  margin: 25px 0;
+  padding: 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222; /* Darker color for better contrast */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.forecast .cardWrapper {
+  background-color: var(--boxes-colors);
+  border-radius: 30px;
+  padding: 10px 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.forecast .cardWrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.forecast .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 17px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.forecast .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.forecast .card:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.forecast .card img {
+  width: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.forecast .card img:hover {
+  transform: scale(1.2); /* Icon enlarges on hover */
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.forecast .card .label {
+  color: var(--sec-text-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.forecast .card span {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  color: #2c3e50; /* Darker text for visibility */
+}
+
+.forecast .card:hover span {
+  color: #3498db; /* Highlighted color on hover */
+}
