@@ -1,4 +1,4 @@
-# Weather Dashborad Application
+# Real-Time Weather Dashboard
 
 - Weather365
 
